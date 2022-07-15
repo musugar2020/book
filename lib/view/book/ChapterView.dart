@@ -12,7 +12,7 @@ import 'package:extended_image/extended_image.dart';
 import 'package:flustars/flustars.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:keframe/frame_separate_widget.dart';
+import 'package:keframe/src/frame_separate_widget.dart';
 
 class ChapterView extends StatefulWidget {
   @override

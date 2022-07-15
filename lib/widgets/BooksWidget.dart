@@ -10,7 +10,7 @@ import 'package:book/widgets/has_update_icon_img.dart';
 import 'package:flustars/flustars.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:keframe/frame_separate_widget.dart';
+import 'package:keframe/src/frame_separate_widget.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 class BooksWidget extends StatefulWidget {

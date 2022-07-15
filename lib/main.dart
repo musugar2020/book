@@ -7,6 +7,7 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:universal_io/io.dart';
 
 GetIt locator = GetIt.instance;
 // FirebaseAnalytics analytics = FirebaseAnalytics();

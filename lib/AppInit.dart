@@ -15,16 +15,27 @@ import 'package:permission_handler/permission_handler.dart';
 import 'common/Http.dart';
 import 'common/common.dart';
 import 'entity/ParseContentConfig.dart';
+import 'package:flutter/foundation.dart';
 
 class AppInit {
   static Future init() async {
     WidgetsFlutterBinding.ensureInitialized();
     GestureBinding.instance.resamplingEnabled = true;
-    if (Platform.isIOS || Platform.isAndroid) {
+    if (defaultTargetPlatform == TargetPlatform.iOS || defaultTargetPlatform == TargetPlatform.android) {
+        // Some android/ios specific code
       if (!await Permission.storage.request().isGranted) {
         return;
       }
     }
+    else if (defaultTargetPlatform == TargetPlatform.linux || defaultTargetPlatform == TargetPlatform.macOS || defaultTargetPlatform == TargetPlatform.windows) {
+        // Some desktop specific code there
+    }
+    else {
+        // Some web specific code there
+    }
+    // print('OS: ${Platform.operatingSystem}');
+    // if (Platform.isIOS || Platform.isAndroid) {
+    // }
 
     await SpUtil.getInstance();
     locator.registerSingleton(TelAndSmsService());
@@ -36,7 +47,7 @@ class AppInit {
     getConfigFromServer();
     String version = packageInfo.version;
     SpUtil.putString("version", version);
-    if (Platform.isAndroid) {
+    if (defaultTargetPlatform == TargetPlatform.android) {
       SystemUiOverlayStyle systemUiOverlayStyle =
           SystemUiOverlayStyle(statusBarColor: Colors.transparent);
       SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);

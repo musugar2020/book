@@ -16,6 +16,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_xupdate/flutter_xupdate.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:flutter/foundation.dart';
 
 class BookShelf extends StatefulWidget {
   @override
@@ -46,7 +47,7 @@ class _BookShelfState extends State<BookShelf> {
 
   ///初始化
   Future<void> initXUpdate() async {
-    if (Platform.isAndroid) {
+    if (defaultTargetPlatform == TargetPlatform.android) {
       FlutterXUpdate.init(
 
               ///是否输出日志

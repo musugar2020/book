@@ -12,8 +12,8 @@ import 'package:dio/dio.dart';
 import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:keframe/frame_separate_widget.dart';
-import 'package:keframe/size_cache_widget.dart';
+import 'package:keframe/src/frame_separate_widget.dart';
+import 'package:keframe/src/size_cache_widget.dart';
 class Video extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
